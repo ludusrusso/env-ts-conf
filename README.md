@@ -1,6 +1,6 @@
 # env-ts-conf
 
-## Typed environment configuration for node
+## Typed environment configuration for node
 
 **env-ts-conf** is a simple library that provides types and autocompletion for configuration loaded from environment file.
 
@@ -32,7 +32,7 @@ const conf: {
 
 ![Example image](./img.png)
 
-## Features
+## Features
 
 - typed configuration and autocompletion!
 - crashes if env variable is not found!
