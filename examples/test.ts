@@ -1,4 +1,4 @@
-import { getConfigs } from '../src/config';
+import { getConfigs } from '..';
 
 const config = getConfigs({
   test: {
@@ -13,5 +13,5 @@ const config = getConfigs({
   },
 });
 
-config.myNumber
+config.myNumber;
 config.test.toUpperCase();
