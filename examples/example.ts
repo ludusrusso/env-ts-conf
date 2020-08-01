@@ -1,4 +1,4 @@
-import { getConfigs } from '..';
+import { getConfigs } from '../lib';
 
 const config = getConfigs({
   test: {

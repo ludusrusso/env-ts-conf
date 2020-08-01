@@ -1,12 +1,15 @@
 {
   "name": "env-ts-conf",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple typed library to load configuration from env files",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "repository": {
+    "url": "git@github.com:ludusrusso/env-ts-conf.git"
+  },
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "prepublish": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [
     "env",
@@ -16,6 +19,10 @@
   "author": "ludusrusso",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^14.0.26"
+    "@types/jest": "^26.0.8",
+    "@types/node": "^14.0.26",
+    "jest": "^26.2.2",
+    "ts-jest": "^26.1.4",
+    "typescript": "^3.9.7"
   }
 }

@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
+    "outDir": "lib",
     "declaration": true,
-    "allowJs": true,
-    "outDir": "./dist" /* Redirect output structure to the directory. */,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
+    "target": "es5",
+    "noImplicitAny": true,
+    "experimentalDecorators": true,
+    "strictNullChecks": true
   },
-  "exclude": ["examples"]
+  "include": ["src"],
+  "exclude": ["**/*.spec.ts"]
 }

@@ -1,41 +1,8 @@
-const throwStringConfig = (
-  env: string,
-  defaultValue?: string | undefined
-): string => {
-  const value = process.env[env] || defaultValue;
-  if (value === undefined || value === null) {
-    throw new Error(`Env ${env} not defined`);
-  }
-  return value;
-};
-
-const throwBooleanConfig = (
-  env: string,
-  defaultValue?: boolean | undefined
-): boolean => {
-  try {
-    const stringValue = throwStringConfig(env);
-    const value = Boolean(stringValue);
-    return value;
-  } catch (error) {
-    if (defaultValue === undefined) {
-      throw new Error(`Env ${env} not defined`);
-    }
-    return defaultValue;
-  }
-};
-
-const throwNumberConfig = (
-  env: string,
-  defaultValue?: number | undefined
-): number => {
-  const stringValue = throwStringConfig(env, `${defaultValue}`);
-  const value = Number(stringValue);
-  if (value === NaN) {
-    throw new Error(`Env ${env} not defined`);
-  }
-  return value;
-};
+import {
+  throwBooleanConfig,
+  throwStringConfig,
+  throwNumberConfig,
+} from './env';
 
 interface StringConfigDefinition {
   readonly variableName: string;
