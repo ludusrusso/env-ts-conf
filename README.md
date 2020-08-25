@@ -4,9 +4,15 @@
 
 **env-ts-conf** is a simple library that provides types and autocompletion for configuration loaded from environment file.
 
-You start from a configuration object describing the environment variabiles you want to load
+### Usage
 
-```ts
+Install with `npm i env-ts-conf`!
+
+Then define your configuration object with
+
+```typescript
+import { getConfigs } from 'env-ts-conf';
+
 const config = getConfigs({
   test: {
     type: 'string',
@@ -21,10 +27,10 @@ const config = getConfigs({
 });
 ```
 
-and you get back a typed object:
+and you'll get back a typed object:
 
 ```ts
-const conf: {
+const config: {
   test: string;
   myNumber: number;
 };
@@ -34,5 +40,13 @@ const conf: {
 
 ## Features
 
-- typed configuration and autocompletion!
-- crashes if env variable is not found!
+1. Simple to use
+2. Configuration output is typed
+3. Supports `number`, `string` and `boolean`
+4. Supports default values,
+5. Panic at starup if configuration is not found
+
+## Contribution
+
+The library has been just released and is not jet super perfect. If you like
+to help me improve it, feel free to submit an issue or a pull request!
