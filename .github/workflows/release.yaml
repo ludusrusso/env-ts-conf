@@ -9,10 +9,9 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: "16"
-      - name: test build
-        run: npm run build
-      - name: run test
-        run: npm run test
+      - run: npm ci
+      - run: npm run build
+      - run: npm run test
   publish:
     runs-on: ubuntu-latest
     steps:
